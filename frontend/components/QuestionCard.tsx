@@ -22,9 +22,9 @@ export default function QuestionCard({ question, onDelete }: QuestionCardProps) 
     return (
         <div className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md">
             <div className="flex items-start justify-between gap-4">
-                <div className="space-y-2">
+                <div className="min-w-0 flex-1 space-y-2">
                     <Link href={`/question/${question.id}`} className="block">
-                        <h3 className="text-lg font-semibold text-slate-900 transition group-hover:text-slate-700">
+                        <h3 className="line-clamp-2 break-words text-lg font-semibold text-slate-900 transition group-hover:text-slate-700">
                             {question.title}
                         </h3>
                     </Link>

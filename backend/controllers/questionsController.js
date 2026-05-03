@@ -3,6 +3,9 @@ const pool = require("../db");
 const createQuestion = async (req, res) => {
     try {
         const { title, body, author } = req.body;
+        if (typeof author === "string" && author.length > 100) {
+            return res.status(400).json({ message: "Author max length is 100" });
+        }
         const result = await pool.query(
             "INSERT INTO questions (title, body, author) VALUES ($1, $2, $3) RETURNING *",
             [title, body, author]
@@ -71,6 +74,9 @@ const createAnswer = async (req, res) => {
     try {
         const { id } = req.params;
         const { body, author } = req.body;
+        if (typeof author === "string" && author.length > 100) {
+            return res.status(400).json({ message: "Author max length is 100" });
+        }
 
         const questionCheck = await pool.query(
             "SELECT id FROM questions WHERE id = $1",

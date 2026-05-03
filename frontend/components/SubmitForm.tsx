@@ -51,6 +51,7 @@ export default function SubmitForm({
                 placeholder="Nama atau Username"
                 value={author}
                 onChange={(event) => onAuthorChange(event.target.value)}
+                maxLength={100}
                 className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-slate-400 focus:outline-none"
                 required
             />

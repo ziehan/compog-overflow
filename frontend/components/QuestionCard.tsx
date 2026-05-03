@@ -20,17 +20,17 @@ export default function QuestionCard({ question, onDelete }: QuestionCardProps) 
         : "Belum ada jawaban";
 
     return (
-        <div className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md">
+        <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md">
             <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0 flex-1 space-y-2">
                     <Link href={`/question/${question.id}`} className="block">
-                        <h3 className="line-clamp-2 break-words text-lg font-semibold text-slate-900 transition group-hover:text-slate-700">
+                        <h3 className="line-clamp-2 break-all text-lg font-semibold text-slate-900 transition group-hover:text-slate-700">
                             {question.title}
                         </h3>
                     </Link>
-                    <p className="text-sm text-slate-500">Oleh {question.author}</p>
+                    <p className="break-all text-sm text-slate-500">Oleh {question.author}</p>
                     <p
-                        className={`line-clamp-1 text-sm ${hasAnswer ? "text-slate-600" : "text-slate-400"
+                        className={`line-clamp-1 break-all text-sm ${hasAnswer ? "text-slate-600" : "text-slate-400"
                             }`}
                     >
                         {preview}

@@ -78,13 +78,13 @@ export default function QuestionDetail() {
 
                 <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
                     <div className="space-y-3">
-                        <h1 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
+                        <h1 className="break-all text-2xl font-semibold text-slate-900 sm:text-3xl">
                             {questionData.question.title}
                         </h1>
                         <div className="space-y-3">
                             <MarkdownContent content={questionData.question.body} />
                         </div>
-                        <p className="text-sm text-slate-500">
+                        <p className="break-all text-sm text-slate-500">
                             Ditanyakan oleh {questionData.question.author}
                         </p>
                     </div>

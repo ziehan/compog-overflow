@@ -11,16 +11,16 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
             remarkPlugins={[remarkGfm]}
             components={{
                 h1: ({ children }) => (
-                    <h1 className="text-2xl font-semibold text-slate-900">{children}</h1>
+                    <h1 className="break-all text-2xl font-semibold text-slate-900">{children}</h1>
                 ),
                 h2: ({ children }) => (
-                    <h2 className="text-xl font-semibold text-slate-900">{children}</h2>
+                    <h2 className="break-all text-xl font-semibold text-slate-900">{children}</h2>
                 ),
                 h3: ({ children }) => (
-                    <h3 className="text-lg font-semibold text-slate-900">{children}</h3>
+                    <h3 className="break-all text-lg font-semibold text-slate-900">{children}</h3>
                 ),
                 p: ({ children }) => (
-                    <p className="leading-7 text-slate-700">{children}</p>
+                    <p className="break-all leading-7 text-slate-700">{children}</p>
                 ),
                 a: ({ children, href }) => (
                     <a
@@ -31,12 +31,12 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
                     </a>
                 ),
                 ul: ({ children }) => (
-                    <ul className="list-disc space-y-2 pl-6 text-slate-700">{children}</ul>
+                    <ul className="list-disc space-y-2 break-all pl-6 text-slate-700">{children}</ul>
                 ),
                 ol: ({ children }) => (
-                    <ol className="list-decimal space-y-2 pl-6 text-slate-700">{children}</ol>
+                    <ol className="list-decimal space-y-2 break-all pl-6 text-slate-700">{children}</ol>
                 ),
-                li: ({ children }) => <li className="leading-7">{children}</li>,
+                li: ({ children }) => <li className="break-all leading-7">{children}</li>,
                 code: ({ inline, children }) => {
                     if (inline) {
                         return (

@@ -1,4 +1,4 @@
-const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://compog-overflow.vercel.app";
+const baseUrl = process.env.NEXT_PUBLIC_API_URL || "https://compog-overflow-backend.vercel.app";
 
 const request = async (path, options) => {
     const response = await fetch(`${baseUrl}${path}`, options);
